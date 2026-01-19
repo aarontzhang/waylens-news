@@ -1,4 +1,5 @@
-const API_BASE = '/api';
+// Use environment variable for API URL in production, proxy in development
+const API_BASE = import.meta.env.VITE_API_URL || '/api';
 
 export async function fetchCompanies(category = null) {
   const url = category
